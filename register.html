@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- link FontAwesome file  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link bootstrap css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- link normalize css to normalize elements -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- link main style css  -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <!-- form container  -->
+        <div class="container">
+            <h1>Sign Up</h1>
+            <!-- login form  -->
+            <div class="form">
+                <div class="input mb-4" id="name">
+                    <input class="mb-1" type="text" placeholder="Name" id="nameInput"  oninput="checkRegex('name')">
+                    <p class="d-none message ms-2 "><i class="fa-solid fa-circle-xmark me-1 text-danger"></i>Invalid user name, please enter from 3 to 16 Char</p>
+                </div>
+                <div class="input mb-4" id="email">
+                    <input class="mb-1" type="text" placeholder="Email" id="emailInput" oninput="checkRegex('email')">
+                    <p class="d-none message  ms-2"><i class="fa-solid fa-circle-xmark me-1 text-danger"></i>Invalid email : example@pop.com </p>
+                </div>
+                <div class="input mb-4" id="password">
+                    <input class="mb-1" type="password" placeholder="Password" id="passInput" oninput="checkRegex('pass')">
+                    <p class="d-none message  ms-2"><i class="fa-solid fa-circle-xmark me-1 text-danger"></i>Invalid Password, please enter at least 8 Char</p>
+                </div>
+                <button type="submit" onclick="signUp()" disabled>Register</button>
+                <p id="register-succes" class="d-none"><i class="fa-solid fa-circle-check ms-2" ></i>Register Succes!</p>
+                <div style="text-align: center;font-weight: 300;">you have an account? <a style="color: #320e54;font-weight: 400;" href="login.html">Sign In</a></div>
+
+            </div>
+            <!-- login form  -->
+        </div>
+        <!-- form container  -->
+    </main>
+    <!-- link jquery file   -->
+    <script src="js/jquery.js"></script>
+    <!-- link FontAwesome js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- link bootsrtap file   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- link js file   -->
+    <script src="js/main.js"></script>
+</body>
+</html>
