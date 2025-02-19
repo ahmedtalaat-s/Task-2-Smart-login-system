@@ -26,16 +26,16 @@ $(document).ready(function () {
   if (!localStorage.getItem("currentUser") && iswelcome) {
     window.location.href = "register.html";
   }
-  // set profile content
-  console.log(currentUser["userName"]);
-  console.log(currentUser.userName);
+  
+});
+// set profile content
 
   if (iswelcome) {
     $("#userContent").html(currentUser.userName);
     $("#emailContent").html(currentUser.userEmail);
     $("#passContent").html(currentUser.userPass);
+    
   }
-});
 
 // check regex function for sign up
 function checkRegex(input) {
