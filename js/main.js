@@ -24,18 +24,15 @@ $(document).ready(function () {
     window.location.href == window.location.origin + "/profile.html";
 
   if (!localStorage.getItem("currentUser") && iswelcome) {
-    window.location.href = "register.html";
+    window.location.href = "index.html";
   }
   
 });
 // set profile content
 
-  if (iswelcome) {
     $("#userContent").html(currentUser.userName);
     $("#emailContent").html(currentUser.userEmail);
     $("#passContent").html(currentUser.userPass);
-    
-  }
 
 // check regex function for sign up
 function checkRegex(input) {
